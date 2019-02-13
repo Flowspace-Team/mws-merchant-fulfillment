@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe MWS::MerchantFulfillment::ServiceStatus do
   let(:instance) { described_class.new(node) }
   let(:node) { load_xml_fixture('service_status').xpath('//xmlns:GetServiceStatusResult').first }
