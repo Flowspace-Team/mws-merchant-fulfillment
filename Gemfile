@@ -1,14 +1,4 @@
-# frozen_string_literal: true
-
 source 'http://rubygems.org'
+
+# Specify your gem's dependencies in mws-merchant_fulfillment.gemspec
 gemspec
-
-gem 'minitest'
-gem 'rake'
-gem 'rubocop'
-
-group :development do
-  gem 'guard'
-  gem 'guard-minitest'
-  gem 'pry'
-end
