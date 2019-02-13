@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Flowspace-Team/mws-merchant_fulfillment.svg?branch=master)](https://travis-ci.org/Flowspace-Team/mws-merchant_fulfillment)
+[![Gem Version](https://badge.fury.io/rb/mws-merchant_fulfillment.svg)](https://badge.fury.io/rb/mws-merchant_fulfillment)
 
 # MWS Merchant Fulfillment
 
