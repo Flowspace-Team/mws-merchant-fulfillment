@@ -4,6 +4,7 @@ require 'peddler'
 require 'nokogiri'
 require 'mws/merchant_fulfillment/service_status'
 require 'mws/merchant_fulfillment/shipping_services'
+require 'mws/merchant_fulfillment/shipment'
 
 module MWS
   module MerchantFulfillment
@@ -20,6 +21,9 @@ module MWS
         case node.name
         when /GetEligibleShippingServices/
           ShippingServices.new(node)
+        when /CreateShipment/
+          shipment_node = node.children.find { |node| node.name == 'Shipment' }
+          Shipment.new(shipment_node)
         else
           raise NotImplementedError
         end
