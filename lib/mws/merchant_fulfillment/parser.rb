@@ -19,6 +19,8 @@ module MWS
         node = find_result_node
 
         case node.name
+        when /GetServiceStatus/
+          ServiceStatus.new(node)
         when /GetEligibleShippingServices/
           ShippingServices.new(node)
         when /CreateShipment/
