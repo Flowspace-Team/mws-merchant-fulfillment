@@ -12,13 +12,13 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Wraps the Amazon MWS Merchant Fulfillment API}
   spec.description   = %q{A rich Ruby interface to the Amazon MWS Merchant Fulfillment API.}
-  spec.homepage      = 'https://github.com/Flowspace-Team/mws-merchant-fulfillment'
+  spec.homepage      = 'https://github.com/Flowspace-Team/mws-merchant_fulfillment'
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = 'https://github.com/Flowspace-Team/mws-merchant-fulfillment'
-    spec.metadata["changelog_uri"] = 'https://github.com/Flowspace-Team/mws-merchant-fulfillment/releases'
+    spec.metadata["source_code_uri"] = 'https://github.com/Flowspace-Team/mws-merchant_fulfillment'
+    spec.metadata["changelog_uri"] = 'https://github.com/Flowspace-Team/mws-merchant_fulfillment/releases'
   end
 
   # Specify which files should be added to the gem when it is released.
