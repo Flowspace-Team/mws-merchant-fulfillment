@@ -1,6 +1,6 @@
-# MWS Merchant Fulfillment
+[![Build Status](https://travis-ci.org/Flowspace-Team/mws-merchant_fulfillment.svg?branch=master)](https://travis-ci.org/Flowspace-Team/mws-merchant_fulfillment)
 
-[![Build Status](https://travis-ci.org/flowspace/mws-merchant_fulfillment.svg)](https://travis-ci.org/Flowspace-Team/mws-merchant_fulfillment)
+# MWS Merchant Fulfillment
 
 **MWS Merchant Fulfillment** is a Ruby interface to the [Amazon Marketplace Web Service (MWS) Merchant Fulfillment API](http://docs.developer.amazonservices.com/en_US/merch_fulfill/index.html). With the MWS Merchant Fulfillment API, you can build applications that let sellers purchase shipping for non-Prime and Prime orders using Amazon’s Buy Shipping Services.
 
