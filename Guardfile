@@ -5,7 +5,7 @@ group :red_green_refactor_rb, halt_on_fail: true do
   }
   rspec_format = "--format documentation"
 
-  rspec_options[:cmd] = "bin/rspec #{rspec_format}"
+  rspec_options[:cmd] = "bundle exec rspec #{rspec_format}"
 
   guard 'rspec', rspec_options do
     watch(%r{spec/spec_helper.rb}) { "spec" }

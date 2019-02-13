@@ -1,5 +1,16 @@
+# frozen_string_literal: true
+
 require "bundler/setup"
-require "mws/merchant_fulfillment"
+require_relative "../lib/mws-merchant_fulfillment"
+
+module FixtureHelpers
+  def load_xml_fixture(type)
+    file = File.expand_path("../fixtures/#{type}.xml", __FILE__)
+    body = File.read(file)
+
+    Nokogiri(body)
+  end
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -11,4 +22,6 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.include FixtureHelpers
 end

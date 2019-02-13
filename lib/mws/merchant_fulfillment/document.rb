@@ -16,10 +16,10 @@ module MWS
       private
 
       def add_namespace(path)
-        path
-          .split('/')
-          .map { |attr| "xmlns:#{attr}" }
-          .join('/')
+        path.
+          split('/').
+          map { |attr| "xmlns:#{attr}" }.
+          join('/')
       end
     end
   end

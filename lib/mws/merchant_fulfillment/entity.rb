@@ -38,7 +38,7 @@ module MWS
 
       def time_at_xpath(path)
         text = text_at_xpath(path)
-        Time.zone.parse(CGI.unescape(text)) if text
+        Time.parse(CGI.unescape(text)) if text
       end
 
       def text_at_xpath(path)

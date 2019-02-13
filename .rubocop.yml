@@ -5,8 +5,8 @@
 # Include only the specific lines that you're changing from the defaults.
 #
 ---
-require: rubocop-rspec
 AllCops:
+  TargetRubyVersion: 2.3
   Exclude:
     - 'Gemfile.lock'
     - 'tmp/**/*'
@@ -23,8 +23,17 @@ Metrics/BlockLength:
   Exclude:
   - 'Guardfile'
   - 'spec/**/*.rb'
+Naming/FileName:
+  Exclude:
+  - 'lib/mws-merchant_fulfillment.rb'
 Style/BracesAroundHashParameters:
   Enabled: false
+Style/FrozenStringLiteralComment:
+  Exclude:
+  - 'Gemfile'
+  - 'Guardfile'
+  - 'Rakefile'
+  - 'bin/*'
 Style/ClassCheck:
   Enabled: false
 Style/RegexpLiteral:
@@ -67,21 +76,3 @@ Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
-RSpec/ContextWording:
-  Enabled: false
-RSpec/EmptyLineAfterHook:
-  Enabled: false
-RSpec/EmptyLineAfterSubject:
-  Enabled: false
-RSpec/ExampleLength:
-  Enabled: false
-RSpec/MultipleExpectations:
-  Max: 5
-RSpec/NestedGroups:
-  Max: 6
-RSpec/LetSetup:
-  Enabled: false
-RSpec/ScatteredLet:
-  Enabled: false
-RSpec/ScatteredSetup:
-  Enabled: false

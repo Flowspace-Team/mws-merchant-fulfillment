@@ -2,6 +2,7 @@
 
 require 'peddler'
 require 'nokogiri'
+require 'mws/merchant_fulfillment/service_status'
 require 'mws/merchant_fulfillment/shipping_services'
 
 module MWS
