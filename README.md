@@ -13,19 +13,17 @@ Create a client:
 
 ```ruby
 require "mws-merchant_fulfillment"
-client = MWS.merchant_fulfillment(marketplace: "ATVPDKIKX0DER",
-                    merchant_id: "123")
+client = MWS.merchant_fulfillment(marketplace: "ATVPDKIKX0DER", merchant_id: "123")
 ```
 
-Set up credentials [when instantiating or with environment variables](https://github.com/Flowspace-Team/peddler#usage).
+Set up credentials [when instantiating or with environment variables](https://github.com/hakanensari/peddler#usage).
 
 ### Eligible Shipping Services
 
 List orders created or updated during a time frame you specify:
 
 ```ruby
-response = client.list_orders(created_after: 1.month.ago)
-request_details = {
+response = client.get_eligible_shipping_services(
   amazon_order_id: amazon_order_id,
   item_list: items,
   ship_from_address: shipping_from,
@@ -35,9 +33,7 @@ request_details = {
     delivery_experience: 'DeliveryConfirmationWithoutSignature',
     carrier_will_pick_up: false,
   },
-}
-
-response = client.get_eligible_shipping_services(request_details)
+)
 shipping_services = response.parse
 puts shipping_services.rates.count # => 1
 puts shipping_services.rates.first.amount # => #<Money fractional:2 currency:USD>
