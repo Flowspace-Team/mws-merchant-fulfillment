@@ -26,6 +26,9 @@ module MWS
         when /CreateShipment/
           shipment_node = node.children.find { |node| node.name == 'Shipment' }
           Shipment.new(shipment_node)
+        when /CancelShipment/
+          shipment_node = node.children.find { |node| node.name == 'Shipment' }
+          Shipment.new(shipment_node)
         else
           raise NotImplementedError
         end
