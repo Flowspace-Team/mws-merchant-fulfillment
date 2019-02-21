@@ -17,7 +17,7 @@ module MWS
 
       attribute(:ship_to_address) do
         node = xpath('ShipToAddress').first
-        Address.new(node)
+        Address.new(node) if node
       end
 
       attribute(:amazon_order_id) do
@@ -26,31 +26,35 @@ module MWS
 
       attribute(:weight) do
         node = xpath('Weight').first
-        Weight.new(node)
+        Weight.new(node) if node
       end
 
       attribute(:label) do
         node = xpath('Label').first
-        Label.new(node)
+        Label.new(node) if node
       end
 
       attribute(:shipping_service) do
         node = xpath('ShippingService').first
-        ShippingService.new(node)
+        ShippingService.new(node) if node
       end
 
       attribute(:package_dimensions) do
         node = xpath('PackageDimensions').first
-        PackageDimensions.new(node)
+        PackageDimensions.new(node) if node
       end
 
       attribute(:created_date) do
         time_at_xpath('CreatedDate')
       end
 
+      attribute(:last_updated_date) do
+        time_at_xpath('LastUpdatedDate')
+      end
+
       attribute(:ship_from_address) do
         node = xpath('ShipFromAddress').first
-        Address.new(node)
+        Address.new(node) if node
       end
 
       attribute(:item_list) do
@@ -67,6 +71,10 @@ module MWS
 
       attribute(:shipment_id) do
         text_at_xpath('ShipmentId')
+      end
+
+      attribute(:seller_order_id) do
+        text_at_xpath('SellerOrderId')
       end
     end
   end
