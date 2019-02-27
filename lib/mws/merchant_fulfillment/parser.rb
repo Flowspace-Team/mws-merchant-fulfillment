@@ -38,6 +38,14 @@ module MWS
         @response.headers
       end
 
+      def status_code
+        @response.status
+      end
+
+      def body
+        @response.body
+      end
+
       private
 
       def find_result_node
